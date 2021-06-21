@@ -42,10 +42,11 @@ Plusy - řeší routování, SSR, static pages, je hojně používáno, existuje
 https://www.apollographql.com/docs/react/get-started/
 
 ```javascript
-npm install react-i18next i18next --save
+npm install @apollo/client graphql
 ```
 
 [doplnit configuraci a příklad použití]
+
 
 ## React-i18next i18next
 https://react.i18next.com/
