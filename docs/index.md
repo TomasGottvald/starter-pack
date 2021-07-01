@@ -23,6 +23,10 @@ Runs the built app in production mode.
 npm start
 ```
 
+Runs the tests.
+```javascript
+npm run test
+```
 
 # Components
 
