@@ -38,15 +38,18 @@ Vytvoří složky
 
 Plusy - řeší routování, SSR, static pages, je hojně používáno, existuje spoustu dalších pluginů a umožňuje lepší debug
 
-## Apollo client 
-https://www.apollographql.com/docs/react/get-started/
+## API client 
+URQL
+
+https://formidable.com/open-source/urql/docs/advanced/server-side-rendering/#nextjs
 
 ```javascript
-npm install @apollo/client graphql
+npm install --save next-urql react-is urql graphql
 ```
 
-[doplnit configuraci a příklad použití]
+Apollo Client - jsme se rozhodli nepoužívat, protože je to několikanásobně větší balík, oproti tomu urql má next.js plugin a budeme mít načítání dat pod větší kontrolou.
 
+https://formidable.com/open-source/urql/docs/comparison/ porovnání uqrl, Apollo, Relay
 
 ## React-i18next i18next
 https://react.i18next.com/

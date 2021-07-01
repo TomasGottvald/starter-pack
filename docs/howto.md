@@ -7,6 +7,13 @@ Vlastní komponenty
 
 Struktura SSFW
 
+api
+- init 
+- queries
+  - brand
+  - category
+  - product
+
 components
 - forms
 - layout

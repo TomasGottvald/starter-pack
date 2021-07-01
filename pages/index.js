@@ -24,6 +24,17 @@ export default function Home() {
               </p>
 
               <div className="grid">
+              <a
+                  href="/test-api/"
+                  className="card"
+                >
+                  <h3>TEST API&rarr;</h3>
+                  <p>
+                    Test api connection with urql-next
+                  </p>
+                </a>
+
+
                 <a href="https://nextjs.org/docs" className="card">
                   <h3>Documentation &rarr;</h3>
                   <p>Find in-depth information about Next.js features and API.</p>
