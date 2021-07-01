@@ -96,6 +96,12 @@ import { IntlProvider, FormattedNumber } from 'react-intl'
   year="numeric"/>
 
 ```
+## Testování komponent
+```javascript
+npm install --save-dev jest
+```
+
+https://reactjs.org/tutorial/tutorial.html
 
 
 ## React-toastify
