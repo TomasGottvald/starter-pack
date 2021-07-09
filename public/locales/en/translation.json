@@ -1,5 +1,8 @@
 {
-  "Create Next App": "",
-  "Shopsys Framework JS Store front EN": "",
-  "English subtitle": ""
+    "Default": "Default",
+    "List of categories": "List of categories",
+    "Loading": "Loading",
+    "Oh no! Error": "Oh no! Error",
+    "Primary": "Primary",
+    "Secondary": "Secondary"
 }

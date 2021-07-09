@@ -1,147 +1,60 @@
-# Install 
-Install all dependencies.
-```javascript
+
+This is documentation for Shopsys Framework StoreFront. Let's start with first two steps.
+
+## Install 
+1 - Install all dependencies.
+```plain
 npm install
 ```
 
-After install open http://localhost:3000/ in your browser.
-
 ## Start app
 
-Start the development server.
-```javascript
+2 - Start the development server.
+```plain
 npm run dev
 ```
+After this command open http://localhost:3000/ in your browser.
 
-Builds the app for production.
-```javascript
+### Optional
+Build the app for production.
+```plain
 npm run build
 ```
 
-Runs the built app in production mode.
-```javascript
+Run the built app in production mode.
+```plain
 npm start
 ```
 
-Runs the tests.
-```javascript
-npm run test
+Run eslint for code
+```plain
+npm run lint
 ```
 
-# Components
-
-## Next.js
-https://nextjs.org/learn/basics/create-nextjs-app
-```javascript
-npx create-next-app [your_app_name] --use-npm --example "https://github.com/vercel/next-learn-starter/tree/master/learn-starter"
+Run eslint and fix code
+```plain
+npm run lint--fix
 ```
 
-Vytvoří složky
-- pages - odtud se generuji stranky a není třeba pro ně vytvářet routování
-- public - soubory v této složce jsou dostupné při zadání nazev_domeny-cz/nazev_souboru_v_public.jpg (bez složky public)
-
-Plusy - řeší routování, SSR, static pages, je hojně používáno, existuje spoustu dalších pluginů a umožňuje lepší debug
-
-## API client 
-URQL
-
-https://formidable.com/open-source/urql/docs/advanced/server-side-rendering/#nextjs
-
-```javascript
-npm install --save next-urql react-is urql graphql
+Run prettier format code
+```plain
+npm run format 
 ```
 
-Apollo Client - jsme se rozhodli nepoužívat, protože je to několikanásobně větší balík, oproti tomu urql má next.js plugin a budeme mít načítání dat pod větší kontrolou.
-
-https://formidable.com/open-source/urql/docs/comparison/ porovnání uqrl, Apollo, Relay
-
-## React-i18next i18next
-https://react.i18next.com/
-
-```javascript
-npm install react-i18next i18next --save
-npm install i18next-http-backend i18next-browser-languagedetector --save
-```
-Plusy - možnost exportů v příkazové řácce a možnost použít BabelEdit (neodzkoušeno)
-
-### React-i18next export překladových souborů
-nastavení je v souboru config/i18next-parser.config.js
-export pomocí příkazové řádky
-```javascript
-i18next 'pages/**/*.{js, tsx}' --config config/i18next-parser.config.js
-```
-Soubory jsou vytvořeny do public/locales/[jazyk]/translation.json - a jsou předvyplněny konstanty z původního jazyka
-
-## React-intl
-https://formatjs.io/docs/getting-started/installation/
-
-```javascript
-npm i -S react react-intl
+Run translation files generator. You can find generated files in /public/locales/ folder.
+```plain
+npm run translate
 ```
 
+Run styleguide generator, which will watch your files and compiles changes and displays it with hot-reload. 
+After start and first compile you can usually find your online styleguide on http://localhost:6060/
 
-```javascript
-import CONFIG from '../config/global'
-import { IntlProvider, FormattedNumber } from 'react-intl'
-
-<IntlProvider locale={ CONFIG.LOCALE }>
-    <FormattedNumber
-        value={ props.data.node.price.priceWithVat }
-        style={`currency`}
-        currency={ CONFIG.CURRENCY }
-        />
-</IntlProvider>
-
-<FormattedTime value={myDate}/>
-<FormattedDate
-  value={myDate}
-  day="numeric"
-  month="long"
-  year="numeric"/>
-
-```
-## Testování komponent
-```javascript
-npm install --save-dev jest
+You may restart stuleguide-server when adding new component or new md file.
+```plain
+npm run styleguide-server
 ```
 
-https://reactjs.org/tutorial/tutorial.html
-
-
-## React-toastify
-```javascript
-npm install --save react-toastify
+One-time compile all stand alone styleguide files as static page. You can find generated files in /docs/styleguide/ folder.
+```plain
+npm run styleguide-build
 ```
-https://www.npmjs.com/package/react-toastify
-
-Demo s nastaveními - https://fkhadra.github.io/react-toastify/introduction/
-
-Plusy - řeší spoustu problémů se zobrazením error hlášek - umožňuje spoustu nastavení - odsouhlaseno s UX
-
-
-## React Styled components
-```javascript
-npm install --save styled-components
-```
-https://styled-components.com/docs/basics#installation
-
-Plusy - umožňuje používat čisté css, globální nastvení themes, práci s proměnnými 
-
-
-## Formik
-https://formik.org/docs/overview
-
-- hezky pracuje s jednotlivými stavy formulářového prvku - včetně zjištění zda bylo do inputu kliknuto (umožňuje pozorovat i jeho historii)
-
-```javascript
-npm install formik --save
-```
-Plusy - Formik je menší o polovinu a rychlejší
-
-## ? App state management
-
-https://dev.to/workshub/state-management-battle-in-react-2021-hooks-redux-and-recoil-2am0
-Redux vs Context
-
-
-
